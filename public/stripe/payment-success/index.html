@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Successful - GymGenerator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: -apple-system, sans-serif; text-align: center; padding: 40px 20px; }
+    h1 { color: #333; }
+    .success-icon {
+      color: #4CAF50;
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+    .button { 
+      display: inline-block; 
+      background: #4CAF50; 
+      color: white; 
+      padding: 14px 28px; 
+      font-size: 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="success-icon">✓</div>
+  <h1>Payment Successful!</h1>
+  <p>Thank you for your payment. You are being returned to the GymGenerator app.</p>
+  <a href="gymgenerator://payment/success" class="button">Return to App</a>
+  
+  <script>
+    // Try to automatically open the app
+    setTimeout(function() {
+      window.location.href = "gymgenerator://payment/success";
+    }, 500);
+  </script>
+</body>
+</html>
