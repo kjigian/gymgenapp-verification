@@ -16,5 +16,18 @@
   ],
   "rewrites": [
     { "source": "/.well-known/apple-app-site-association", "destination": "/public/.well-known/apple-app-site-association" }
+  ],
+  "redirects": [
+    { 
+      "source": "/.well-known/apple-app-site-association",
+      "destination": "/.well-known/apple-app-site-association",
+      "has": [
+        {
+          "type": "host",
+          "value": "gymgenapp.com"
+        }
+      ],
+      "permanent": false
+    }
   ]
 }
