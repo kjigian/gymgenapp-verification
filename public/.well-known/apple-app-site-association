@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "5JULRS75L8.com.kjig.GymGenerator",
+        "paths": [ "/stripe/*" ]
+      }
+    ]
+  }
+}
