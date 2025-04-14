@@ -6,8 +6,15 @@
         {
           "key": "Content-Type",
           "value": "application/json"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
         }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/.well-known/apple-app-site-association", "destination": "/public/.well-known/apple-app-site-association" }
   ]
 }
