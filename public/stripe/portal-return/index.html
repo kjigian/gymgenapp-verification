@@ -4,30 +4,41 @@
   <title>Returning to GymGenerator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: -apple-system, sans-serif; text-align: center; padding: 40px 20px; }
-    h1 { color: #333; }
+    body { font-family: -apple-system, sans-serif; text-align: center; padding: 40px 20px; background-color: #f8f9fa; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    h1 { color: #007bff; margin-bottom: 20px; }
+    p { font-size: 18px; line-height: 1.6; }
     .button { 
       display: inline-block; 
-      background: #4CAF50; 
+      background: #007bff; 
       color: white; 
       padding: 14px 28px; 
       font-size: 18px;
       border-radius: 8px;
       text-decoration: none;
       margin-top: 20px;
+      font-weight: bold;
     }
+    .logo { width: 80px; height: 80px; margin-bottom: 20px; }
   </style>
+  <script>
+    // Try to open the app immediately
+    window.location.href = "gymgenerator://payment/success";
+    
+    // If we're still on this page after 1 second, show manual button
+    setTimeout(function() {
+      document.getElementById('manual-redirect').style.display = 'block';
+    }, 1000);
+  </script>
 </head>
 <body>
-  <h1>Returning to GymGenerator App</h1>
-  <p>Tap the button below to return to the app:</p>
-  <a href="gymgenerator://payment/success" class="button">Return to App</a>
-  
-  <script>
-    // Try to automatically open the app
-    setTimeout(function() {
-      window.location.href = "gymgenerator://payment/success";
-    }, 500);
-  </script>
+  <div class="container">
+    <h1>Returning to GymGenerator</h1>
+    <p>Your subscription settings have been updated.</p>
+    <div id="manual-redirect" style="display: none;">
+      <p>Tap the button below to return to the app:</p>
+      <a href="gymgenerator://payment/success" class="button">Return to GymGenerator</a>
+    </div>
+  </div>
 </body>
 </html>
